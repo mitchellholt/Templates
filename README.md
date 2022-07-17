@@ -13,3 +13,5 @@ You must have the following, each of which can be installed from their github pa
 # Installation #
 Clone the repository and change into the directory created by git. Run `chmod +x ./template.sh`.
 Finally, add the location of the script to the path.
+
+For Windows users I hope you know how to make this an executable.
