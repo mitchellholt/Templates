@@ -7,7 +7,12 @@ read -a tokens <<< "$1"
 
 if [[ ${#tokens[@]} -ne 2 ]]
 then
-    echo "$1 is not a valid file name. Make sure your input is written as [NAME].[EXTENSION] (e.g. hi_mum.txt)"
+    if ["$1" == ""]
+    then
+        echo "Please enter a file name."
+    else
+        echo "$1 is not a valid file name. Make sure your input is written as [NAME].[EXTENSION] (e.g. hi_mum.txt)"
+    fi
 else
     extension="${tokens[1]}"
     selected=`find ~/Documents/Templates -type f -name *."$extension" | fzf`
